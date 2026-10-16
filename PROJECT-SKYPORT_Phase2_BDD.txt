@@ -1,0 +1,55 @@
+﻿classDiagram
+    direction TB
+    class SKYPORT_HUB {
+        +String systemID
+        +float operationalAvailability
+        +executeTurnaround()
+    }
+
+
+    class PowerSubsystem {
+        +float voltageOutput: 1000 VDC
+        +float currentRating: 1000 A
+        +deliverPower()
+    }
+
+
+    class BatterySwappingSubsystem {
+        +float swapDuration: 180s
+        +executeSwap()
+    }
+
+
+    class CivilInfrastructure {
+        +float padLoadCapacity: 12000 lbs
+        +float downwashVelocity: <20 knots
+        +supportAircraft()
+    }
+
+
+    class AOISubsystem {
+        +float opticalResolution: 0.5 mm
+        +scanAirframe()
+    }
+
+
+    class IndustrialControls {
+        +float controlVoltage: 24 VDC
+        +float epoResponseTime: <20 ms
+        +manageInterlocks()
+    }
+
+
+    class UTMSoftware {
+        +float telemetryLatency: <100 ms
+        +float refreshRate: 1 Hz
+        +syncAirspace()
+    }
+
+
+    SKYPORT_HUB *-- PowerSubsystem : allocates SKY-REQ-002
+    SKYPORT_HUB *-- BatterySwappingSubsystem : allocates SKY-REQ-003
+    SKYPORT_HUB *-- CivilInfrastructure : allocates SKY-REQ-005, 006
+    SKYPORT_HUB *-- AOISubsystem : allocates SKY-REQ-007, 008
+    SKYPORT_HUB *-- IndustrialControls : allocates SKY-REQ-009, 010, 011
+    SKYPORT_HUB *-- UTMSoftware : allocates SKY-REQ-012, 013

@@ -1,0 +1,18 @@
+,Requirement ID,Subsystem Allocation,Requirement Statement,Verification Method,Target Acceptance Criteria
+,SKY-REQ-001,System Level / Operations,The SKYPORT-HUB system SHALL execute full aircraft ground turnaround processing from touchdown to liftoff.,Demonstration (D),Total turnaround time ≤ 12.0 minutes.
+,SKY-REQ-002,Power & Charging Subsystem,The Megawatt Fast-Charging Gantry SHALL deliver continuous high-voltage direct current to the aircraft interface.,Test (T),Output voltage up to 1000 VDC at ≥ 1000 A charging current.
+,SKY-REQ-003,Battery Swapping Subsystem,"The Automated Battery Swap Arm SHALL physically unlatch, extract, replace, and lock aircraft battery modules.",Test (T),Robotic swap completion time ≤ 180 seconds.
+,SKY-REQ-004,Power & Thermal Safety,The charging interface cooling loop SHALL maintain battery module skin temperatures within safe thermal thresholds during fast charging.,Analysis (A),Battery thermal limits maintained < 60°C throughout cycle.
+,SKY-REQ-005,Civil / CAD Infrastructure,The landing pad (FATO/TLOF) SHALL provide physical clearance envelopes sized for multi-rotor eVTOL aircraft wingspans.,Inspection (I),Spatial clearance envelope ≥ 1.5× maximum aircraft D-value.
+,SKY-REQ-006,Civil Infrastructure,The vertiport perimeter SHALL include blast fencing engineered to redirect rotor downwash velocity away from passenger corridors.,Analysis (A),Downwash velocity at passenger gate < 20 knots during hover.
+,SKY-REQ-007,AOI Drone Subsystem,"The AOI inspection drone SHALL scan critical airframe surfaces, rotor blades, and landing gear for structural defects post-landing.",Test (T),Surface defect resolution down to 0.5 mm flaw detection.
+,SKY-REQ-008,AOI Drone Subsystem,The AOI drone mission SHALL complete its automated inspection sweep without extending the baseline turnaround schedule.,Demonstration (D),Total optical scan duration ≤ 90 seconds.
+,SKY-REQ-009,Industrial Control Subsystem,The ground control panel SHALL operate safety relay logic on isolated low-voltage control circuits.,Inspection (I),Control circuit voltage standard of 24 VDC.
+,SKY-REQ-010,Industrial Control Subsystem,The high-power distribution unit SHALL isolate grid power from the charging gantry using physical safety interlocks during docking.,Test (T),480 VAC primary power isolation within 50 ms of unlatch signal.
+,SKY-REQ-011,System Safety,The facility SHALL feature hardwired Emergency Power-Off (EPO) circuits accessible at all control stations.,Test (T),Total high-power grid disconnection response time < 20 ms upon EPO trigger.
+,SKY-REQ-012,UTM / GCS Software,The supervisory Ground Control Station SHALL maintain real-time bidirectional telemetry communication with incoming aircraft.,Test (T),Data telemetry latency < 100 ms over Ethernet/IP link.
+,SKY-REQ-013,UTM / GCS Software,The UTM software layer SHALL automatically synchronize vertiport pad availability status with regional airspace management networks.,Demonstration (D),Status update refresh rate ≥ 1 Hz.
+,SKY-REQ-014,Civil Infrastructure,Passenger boarding bridges SHALL remain physically locked until the aircraft is stationary and charging interlocks are engaged.,Demonstration (D),Zero gate access permitted while rotors are turning or fast-charging is active.
+,SKY-REQ-015,System Reliability,The ground handling system SHALL maintain high overall system availability (Ao) across continuous 24/7 commercial operational shifts.,Analysis (A),Operational availability Ao ≥ 98.5%.
+,,,,,
+,,,"Verification Methods key: I = Inspection, A = Analysis, D = Demonstration, T = Test.",,

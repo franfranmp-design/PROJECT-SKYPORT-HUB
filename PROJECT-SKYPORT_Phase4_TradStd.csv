@@ -1,0 +1,6 @@
+,Trade Study,,,,,,,
+,,,,,,,,
+,Strategy,Mean Turnaround (min),P95 Turnaround (min),Compliance <=12min (%),Peak Power Grid Demand (MW),Equipment CAPEX ($M),System Availability Ao (%),Key Risk / Trade-off
+,Option 1: Megawatt Fast-Charging,13.05,14.91,17.7,1.5,1.2,99.39,"High grid peak demand, thermal stress on battery"
+,Option 2: Automated Battery Swapping,8.54,9.51,100,0.4,2.8,99.19,"High mechanical complexity (6-DOF arm), higher CAPEX"
+,Option 3: Hybrid Architecture (Recommended),10.34,13.42,98.2,0.8,3.2,99.39,Optimal balance of speed during peak hours & grid load management

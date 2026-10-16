@@ -1,0 +1,28 @@
+,Interface Control Document (ICD) Matrix,,,,,
+,"Compliant with standard systems engineering interface specifications, providing full bidirectional traceability to Phase 1 Requirements ( SKY-REQ-001 through SKY-REQ-015 ).",,,,,
+,,,,,,
+,Interface ID,Source Subsystem,Destination Subsystem,Interface Type,Technical Specification & Protocol,Traceable Requirement ID
+,ICD-IF-001,High-Power Facility Grid,Industrial Control / PDU,Electrical (AC Power),"Voltage: 480 VAC ± 5%, 3-Phase, 60 Hz.
+Capacity: 1.5 MW continuous rating.
+Terminal: Fixed copper busbars with physical safety shield.","SKY-REQ-010, SKY-REQ-011"
+,ICD-IF-002,Power Distribution Unit (PDU),Megawatt Fast-Charging Gantry,Electrical (DC High Power),"Voltage: Up to 1000 VDC.
+Current: ≥ 1000 A continuous.
+Bus: Shielded high-voltage direct current (HVDC) power cable harness.",SKY-REQ-002
+,ICD-IF-003,Megawatt Charging Connector / Swap Arm,eVTOL Aircraft Power Interface,Hybrid (Electrical + Thermal + Mechanical),"Power: Combined HVDC terminal pins.
+Thermal: Closed-loop liquid coolant lines (50/50 Water-Glycol) maintaining skin temp < 60°C.
+Mechanical: Automated blind-mate guide pins (alignment tolerance ± 2.0 mm).","SKY-REQ-002, SKY-REQ-003, SKY-REQ-004"
+,ICD-IF-004,eVTOL Aircraft Avionics,Supervisory Ground Control Station (GCS),Wireless Data Telemetry,"Protocol: Encrypted Ethernet/IP over 5G Private Network / IEEE 802.11ax.
+Latency: < 100 ms bidirectional.
+Parameters: Battery SOC, thermal telemetry, GPS status.",SKY-REQ-012
+,ICD-IF-005,Supervisory GCS,Regional UTM Network,Software API / Airspace Link,"Protocol: RESTful API / MQTT over Secure TLS.
+Update Rate: ≥ 1 Hz.
+Data: Vertiport pad occupancy, ETA predictions, emergency pad reservations.",SKY-REQ-013
+,ICD-IF-006,Industrial Control Panel,Emergency Power-Off (EPO) / Safety Interlocks,Low-Voltage Control,"Signal: 24 VDC hardwired fail-safe current loop.
+Response Time: Grid power disconnection < 20 ms upon EPO switch activation.
+Interlock: Gate access solenoid locked during power transfer.","SKY-REQ-009, SKY-REQ-010, SKY-REQ-011, SKY-REQ-014"
+,ICD-IF-007,AOI Inspection Drone,Supervisory GCS,High-Speed Wireless Data,"Link: Wi-Fi 6E point-to-point link.
+Payload: 4K optical feed + LIDAR point cloud.
+Resolution: 0.5 mm airframe surface crack/defect detection within 90 sec scan.","SKY-REQ-007, SKY-REQ-008"
+,ICD-IF-008,Civil FATO/TLOF Pad Infrastructure,eVTOL Aircraft Landing Gear,Mechanical / Structural Envelope,"Clearance: Spatial envelope ≥ 1.5× maximum aircraft D-value.
+Load Rating: Designed for maximum takeoff weight (MTOW) impact loads.
+Downwash: Perimeter blast fencing limiting gate velocity < 20 knots.","SKY-REQ-005, SKY-REQ-006"

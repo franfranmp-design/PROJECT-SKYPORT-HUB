@@ -1,0 +1,8 @@
+,Technical Performance Measure tracking ledger,,,,,,,,
+,,,,,,,,,
+,TPM ID,Parameter Name,Traceable Req ID,Target Value,SRR Baseline,PDR Allocation,CDR Verified Value,Current Status,Mitigation / Notes
+,TPM-001,Turnaround Cycle Time Margin,SKY-REQ-001,<= 12.0 min,12.0 min (0.0% margin),10.5 min (12.5% margin),9.4 min (21.67% margin),PASSED (Compliant),Achieved via ECP-001 pivot to Hybrid Battery Swapping
+,TPM-002,Operational Availability (Ao),SKY-REQ-015,>= 98.5%,98.50% (+0.00% margin),99.00% (+0.51% margin),99.53% (+1.03% margin),PASSED (Compliant),Verified via series RMA Weibull distribution model
+,TPM-003,Wireless Telemetry RTT Latency,SKY-REQ-012,< 100.0 ms,100.0 ms (0.0% margin),80.0 ms (20.0% margin),42.8 ms (57.20% margin),PASSED (Compliant),Verified over 5G private network test bench (10k bursts)
+,TPM-004,AOI Drone Optical Scan Window,SKY-REQ-008,<= 90.0 s,90.0 s (0.0% margin),80.0 s (11.1% margin),68.5 s (23.89% margin),PASSED (Compliant),Full 4K optical & LIDAR point cloud sweep complete
+,TPM-005,EPO Contactor Trip Latency,SKY-REQ-011,< 20.0 ms,20.0 ms (0.0% margin),15.0 ms (25.0% margin),12.4 ms (38.00% margin),PASSED (Compliant),Measured across 24VDC hardwired NC relay loop

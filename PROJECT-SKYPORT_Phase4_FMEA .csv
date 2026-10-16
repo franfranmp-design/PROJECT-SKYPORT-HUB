@@ -1,0 +1,19 @@
+,MIL-STD-882E & FMEA Safety Matrix (With RAC + RPN),,,,,,,,
+,,,,,,,,,
+,Hazard ID,Subsystem Allocation,Failure Mode / Hazard,Initial RAC,Initial RPN (S × O × D),Engineered Safety Mitigation,Residual RAC,Residual RPN (S × O × D),RPN Reduction
+,HAZ-001,Power Subsystem,Thermal Runaway during 1000VDC Fast-Charging (Coolant pump failure or cell overcharge).,High (RAC 1) (I-C),300 (10 × 6 × 5),Redundant RTD thermal sensors on cooling loop; shunt breaker trips 480VAC grid if temp ≥ 60°C in <50 ms.,Low (RAC 4) (I-E),40 (10 × 2 × 2),-86.70%
+,HAZ-002,Battery Swap Arm,Inadvertent Aircraft Takeoff During Battery Extraction (Premature taxi with arm engaged).,High (RAC 2) (II-B),224 (8 × 7 × 4),Hardwired 24VDC interlock (ICD-IF-006); mechanical latch sensor prevents avionics throttle arming while arm is mated.,Low (RAC 4) (II-E),16 (8 × 2 × 1),-92.90%
+,HAZ-003,Civil / Ground Safety,Passenger Exposure to High Rotor Downwash (Gate door opened during active hover/taxi).,Serious (RAC 3) (II-C),210 (7 × 6 × 5),Solenoid gate lock (SKY-REQ-014); gates de-energized until rotor RPM = 0. Blast fencing redirects downwash < 20 knots.,Negligible (RAC 5) (IV-E),7 (7 × 1 × 1),-96.70%
+,HAZ-004,Industrial Controls,Arc Flash during Docking/Undocking (Contactors disconnected under live 1000A load).,Serious (RAC 3) (I-D),216 (9 × 4 × 6),Pre-charge contactor sequencing; pilot interlock verifies zero current flow before mechanical pin release.,Low (RAC 4) (I-E),18 (9 × 1 × 2),-91.70%
+,HAZ-005,Facility Safety,Software Freeze During Emergency Power-Off (EPO) (Supervisory OS hang under fault).,Serious (RAC 3) (I-D),200 (10 × 4 × 5),"Completely hardwired, normally closed (NC) 24VDC relay circuit (SKY-REQ-011) bypassing OS; opens grid breakers in <20 ms.",Low (RAC 4) (I-E),10 (10 × 1 × 1),-95.00%
+,,,,,,,,,
+,,,,,,,,,
+,RPN = Severity x Occurence x Detection,,,,,"RAC                                                                                                                                                                                                                              Severity Categories (Roman Numerals I to IV):
+• Catastrophic (I): Death, permanent total disability, or system loss.
+• Critical (II): Severe injury, major system damage, or significant delay.
+• Marginal (III): Minor injury, minor system damage.
+• Negligible (IV): Less than minor injury or system degradation.
+2. Probability Levels (Letters A to E):
+• Frequent (A) → Probable (B) → Occasional (C) → Remote (D) → Improbable (E).
+3. The Resulting RAC Score:
+• High (RAC 1-2) (unacceptable without sign-off), Serious (RAC 3), Medium, to Low (RAC 4-5).",,,

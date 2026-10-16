@@ -1,0 +1,59 @@
+﻿flowchart LR
+    subgraph Facility_Grid ["High-Power Facility Grid"]
+        p_grid_out["[p_grid: 480 VAC]"]
+    end
+
+
+    subgraph PDU ["Industrial Control & Power Distribution Unit"]
+        p_grid_in["[p_grid_in]"]
+        p_hvdc_out["[p_hvdc_out: 
+        1000 VDC]"]
+        p_ctrl_out["[p_ctrl: 24 VDC 
+        Logic]"]
+        p_epo_in["[p_epo_in]"]
+    end
+
+
+    subgraph Fast_Charger ["Megawatt Fast-Charging & Swap Subsystem"]
+        p_hvdc_in["[p_hvdc_in]"]
+        p_cool_in["[p_cool_in: 
+        Liquid Loop]"]
+        p_mating_out["[p_mating: 
+        Power/Cooling 
+        Plug]"]
+    end
+
+
+    subgraph Aircraft ["eVTOL Aircraft Interface"]
+        p_mating_in["[p_mating_in]"]
+        p_telem_out["[p_telem_out: RF 
+        Telemetry]"]
+    end
+
+
+    subgraph GCS_UTM ["Supervisory GCS & UTM Network"]
+        p_telem_in["[p_telem_in]"]
+        p_utm_sync["[p_utm: Airspace 
+        API]"]
+        p_gcs_ctrl["[p_gcs_ctrl]"]
+    end
+
+
+    subgraph Safety_System ["System Safety & EPO Circuits"]
+        p_epo_out["[p_epo_out: 
+        Relay Signal]"]
+        p_gate_lock["[p_gate_lock: 
+        Gate Solenoid]"]
+    end
+    Facility_Grid -- "480 VAC / 3-Phase Grid 
+    Power" --> PDU
+    PDU -- "1000 VDC HVDC Bus" --> Fast_Charger
+    Fast_Charger -- "HVDC + Coolant Mating 
+    Connector" --> Aircraft
+    Aircraft -- "RF Telemetry 
+    (< 100 ms Latency)" --> GCS_UTM
+    GCS_UTM -- "1 Hz Pad Status Updates" --> GCS_UTM
+    Safety_System -- "24 VDC Hardwired EPO 
+    Interlock" --> PDU
+    Safety_System -- "Gate Lock Interlock" --> Fast_Charger
+    PDU -- "24 VDC Control Logic" --> Safety_System

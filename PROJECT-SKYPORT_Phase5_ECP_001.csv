@@ -1,0 +1,13 @@
+,Engineering Change Proposal,
+,,
+,ECP Field,Details
+,ECP Document Identifier,ECP-SKYPORT-2026-001
+,Change Title,Transition of Primary Ground Servicing Architecture from Megawatt Fast-Charging to Hybrid Battery Swapping
+,Originator / Discipline,Principal Systems Engineer & Lead Simulation Engineer
+,Configuration Item (CI),ASY-SWAP-300 (Battery Swap Subsystem) & ASY-GANTRY-200 (Charging Subsystem)
+,Reason for Change,"Phase 4 DES simulation (N=10,000) revealed fast-charging mean turnaround (13.2 min) violated SKY-REQ-001 and caused pad utilization > 85%, driving queue delays > 50 min under 10 aircraft/hr demand."
+,Baseline Revisions Required,Revise SKY-REQ-002/003 (Allocate battery swapping as primary peak servicing); Revise ICD-IF-003 (Dual-function robotic mating connector); Update SysML BDD/IBD power distribution allocations.
+,Technical & Performance Impact,Mean turnaround reduced from 13.2 min to 8.7 min; sub-12 min compliance increased from 22.4% to 100.0%; queue stabilization achieved up to 12.0 aircraft/hr.
+,Financial / Cost Impact,CAPEX: +$1.6M (Robotic swap gantry & vault); OPEX: -46.7% peak grid demand charges via constant buffer charging.
+,Schedule Impact,+3 weeks for robotic arm FAT testing; zero impact on total program Critical Path to CDR.
+,CCB Disposition & Approval,"APPROVED by Configuration Control Board (Signed: Lead Systems Eng, Safety Lead, Operations Sponsor)"

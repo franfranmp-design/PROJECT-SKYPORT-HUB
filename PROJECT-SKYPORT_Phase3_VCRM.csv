@@ -1,0 +1,20 @@
+,Verification Cross-Reference Matrix (VCRM),,,,,
+,,,,,,
+,Requirement ID,Subsystem Allocation,Verification Method,Verification Event / Milestone,Primary Test Setup & Instrumentation,Quantitative Acceptance Criteria
+,SKY-REQ-001,System Level / Operations,Demonstration (D),System Integration Test (SIT),"Full-scale Vertiport Simulator, Automated Docking Timer",Total turnaround time ≤ 12.0 min across 50 consecutive test runs.
+,SKY-REQ-002,Power & Charging,Test (T),Factory Acceptance Test (FAT),"Programmable HVDC Load Bank, Fluke 87V DMM",Continuous 1000 VDC (±2%) at ≥ 1000 A for 10 minutes.
+,SKY-REQ-003,Battery Swapping,Test (T),Subsystem Bench Test,"Robotic Swap Arm Test Bench, High-Speed Timer","Complete unlatch, extract, replace, and lock cycle in ≤ 180 s."
+,SKY-REQ-004,Power & Thermal Safety,Analysis (A),Thermal Model & FLIR Test,"FLIR Thermal Imaging Camera, Thermocouple Array",Battery module skin temperature maintained < 60°C during fast-charging.
+,SKY-REQ-005,Civil Infrastructure,Inspection (I),Facility Conformance Audit,"Leica 3D Laser Scanner, CAD Overlay","TLOF diameter ≥ 22.5 m, FATO diameter ≥ 30.0 m (≥ 1.5 × D)."
+,SKY-REQ-006,Civil Infrastructure,Analysis (A),CFD & Anemometer Test,"Passenger Gate Anemometer Array, CFD Model",Gate walkway velocity < 20 knots under 50-knot hover downwash.
+,SKY-REQ-007,AOI Drone Subsystem,Test (T),Payload Verification,Composite Test Panel with calibrated micro-cracks,100% detection of artificial 0.5 mm surface defects across 20 test sweeps.
+,SKY-REQ-008,AOI Drone Subsystem,Demonstration (D),Flight Integration Test,"GCS Mission Planner, Flight Tracking Timer","Total optical launch, scan, upload, and land duration ≤ 90 s."
+,SKY-REQ-009,Industrial Controls,Inspection (I),Cabinet Wiring Audit,"Calibrated DMM, Wiring Schematics",Control circuit operating voltage verified at 24 VDC (±5%).
+,SKY-REQ-010,Industrial Controls,Test (T),Interlock Bench Test,"Tektronix Oscilloscope, Current Transducer",480 VAC grid power isolation verified within ≤ 50 ms of unlatch signal.
+,SKY-REQ-011,System Safety,Test (T),Safety Acceptance Test,"4-Channel Oscilloscope, Hardwired EPO Switch",High-power contactor trip response time < 20.0 ms upon EPO switch depression.
+,SKY-REQ-012,UTM / GCS Software,Test (T),Software SIT,"Spirent C50 Traffic Generator, Wireshark","Bidirectional Ethernet/IP telemetry round-trip latency < 100 ms (10,000 packet bursts)."
+,SKY-REQ-013,UTM / GCS Software,Demonstration (D),Network API Test,RESTful API / MQTT Test Harness,Airspace status update refresh rate ≥ 1.0 Hz over 24 hrs.
+,SKY-REQ-014,Civil Infrastructure,Demonstration (D),Operational Safety Demo,"Solenoid Lock Sensor, Optical RPM Sensor",Zero gate unlock events permitted while rotor RPM > 0 or charging is active.
+,SKY-REQ-015,System Reliability,Analysis (A),RMA Model Review,"Subsystem Failure Database, Weibull/RMA Script",Calculated operational availability Ao ≥ 98.5% (Achieved 99.53% in series model).
+,,,,,,
+,"Categorizes each requirement (SKY-REQ-001 through SKY-REQ-015) across the four RFC-2119 verification methods: Inspection (I), Analysis (A), Demonstration (D), and Test (T).",,,,,
