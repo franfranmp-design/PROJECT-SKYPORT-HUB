@@ -24,6 +24,8 @@ An end-to-end Systems Engineering capstone project executing the complete DoD/IN
 - **Trade Study Matrix (`PROJECT-SKYPORT_Phase4_TradStd.csv`):** Evaluated Megawatt Fast-Charging vs. Automated Battery Swapping; identified cascading queue collapse under fast-charging (5.2% compliance; 54.8 min max wait) and validated battery swapping (9.4 min mean TAT; 90.8% compliance).
 - **MIL-STD-882E Hazard Analysis (`PROJECT-SKYPORT_Phase4_FMEA.csv`):** Synthesized Risk Assessment Codes (RAC) and Risk Priority Numbers (RPN) across 5 critical hazards, achieving a 92.6% mean RPN reduction via hardwired 24VDC interlocks and shunt-trip breakers.
 
+(`TAT_chart_comparison.png`)
+
 ### Phase 5: Configuration Management & Technical Performance
 - **Engineering Change Proposal (`PROJECT-SKYPORT_Phase5_ECP_001.csv`):** Formulated ECP-001 through Configuration Control Board (CCB) disposition, documenting technical, financial (+1.6M CapEx), and schedule impacts of pivoting to hybrid battery swapping.
 - **Technical Performance Measure Ledger (`PROJECT-SKYPORT_Phase5_TPM_Ledger.csv`):** Tracked 5 key TPMs from SRR through PDR to CDR, verifying a 21.67% turnaround time margin and 99.53% operational availability (Ao).
